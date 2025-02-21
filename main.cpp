@@ -34,6 +34,7 @@ void findNextGen(vector<vector<int>> &mat) {
                 nextGen[i][j] = 0;
             }
 
+
             // If current cell is dead and number of live neighbors
             // is equal to 3, then the cell will become live
             else if (mat[i][j] == 0 && live == 3) {
@@ -67,13 +68,26 @@ void initRandomGrid(vector <vector<int>> &mat, int m , int n) {
 }
 
 int main() {
-    vector<vector<int>> mat =
-    {{0, 0, 0, 0}, {0, 1, 0, 0}, {0, 1, 0, 0}, {0, 1, 0, 0}}; //Blinker pattern
 
-    int gens = 5;
+    // HARD CODED Rows and Columns //
+    //int m = 10; //rows
+    //int n = 10; //columns
+
+    // RANDOM GRID and USER INPUT Rows and Columns //
+    int m;
+    int n;
+    cout << "Enter rows and columns: ";
+    cin >> m >> n;
+    vector<vector<int>> mat(m, vector<int>(n, 0));
+
+    initRandomGrid(mat, m, n);
+
+    int gens = 10;
     for (int gen = 0; gen < gens; gen++) {
         cout << "Generation " << gen + 1 << ":\n";
         findNextGen(mat);
         cout << endl;
     }
+    cout << "Number of rows: " << m << endl
+         << "Number of columns: " << n << endl;
 }
