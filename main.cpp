@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include "utils/bits/stdc++.hpp"
+#include <iostream>
 using namespace std;
 
 // Function to find the next generation
@@ -76,18 +77,22 @@ int main() {
     // RANDOM GRID and USER INPUT Rows and Columns //
     int m;
     int n;
-    cout << "Enter rows and columns: ";
+    cout << "Enter rows and columns: " << endl;
     cin >> m >> n;
     vector<vector<int>> mat(m, vector<int>(n, 0));
 
     initRandomGrid(mat, m, n);
 
-    int gens = 10;
+    int gens;
+    cout << "Enter number of gens: " << endl;
+    cin >> gens;
+
     for (int gen = 0; gen < gens; gen++) {
         cout << "Generation " << gen + 1 << ":\n";
         findNextGen(mat);
         cout << endl;
+        this_thread::sleep_for(chrono::milliseconds(500));
     }
-    cout << "Number of rows: " << m << endl
-         << "Number of columns: " << n << endl;
+    //cout << "Number of rows: " << m << endl
+    //     << "Number of columns: " << n << endl;
 }

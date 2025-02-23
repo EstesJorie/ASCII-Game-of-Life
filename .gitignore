@@ -19,3 +19,5 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sw?
+
+.cmake-build-debug/*
