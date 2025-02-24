@@ -1,6 +1,6 @@
 #include "utils/bits/stdc++.hpp"
 #include <iostream>
-#include <SFML/Graphics.hpp>
+//#include <SFML/Graphics.hpp>
 
 using namespace std;
 
@@ -9,20 +9,20 @@ const int HEIGHT = 800;
 const int GRID_SIZE = 50;
 vector<vector<int>> grid(GRID_SIZE, vector<int>(GRID_SIZE, 0)); // Use vector
 
-void drawGrid(sf::RenderWindow &window) {
-    sf::RectangleShape cell(sf::Vector2f(WIDTH / GRID_SIZE, HEIGHT / GRID_SIZE));
-    for (int i = 0; i < GRID_SIZE; i++) {
-        for (int j = 0; j < GRID_SIZE; j++) {
-            if (grid[i][j] == 1) {
-                cell.setFillColor(sf::Color::Green); // Alive = green
-            } else {
-                cell.setFillColor(sf::Color::White); // Dead =  white
-            }
-            cell.setPosition(i * (WIDTH / GRID_SIZE), j * (HEIGHT / GRID_SIZE));
-            window.draw(cell);
-        }
-    }
-}
+// void drawGrid(sf::RenderWindow &window) {
+//     sf::RectangleShape cell(sf::Vector2f(WIDTH / GRID_SIZE, HEIGHT / GRID_SIZE));
+//     for (int i = 0; i < GRID_SIZE; i++) {
+//         for (int j = 0; j < GRID_SIZE; j++) {
+//             if (grid[i][j] == 1) {
+//                 cell.setFillColor(sf::Color::Green); // Alive = green
+//             } else {
+//                 cell.setFillColor(sf::Color::White); // Dead =  white
+//             }
+//             cell.setPosition(i * (WIDTH / GRID_SIZE), j * (HEIGHT / GRID_SIZE));
+//             window.draw(cell);
+//         }
+//     }
+// }
 
 void findNextGen(vector<vector<int>> &mat, vector<vector<int>> &nextGen) {
     int m = mat.size();
@@ -132,9 +132,6 @@ int main() {
                 break;
             }
         }
-        
-        
-        
         this_thread::sleep_for(chrono::milliseconds(500));
     }
 }
