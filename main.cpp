@@ -2,12 +2,11 @@
 #include <iostream>
 using namespace std;
 
-// Function to find the next generation
 void findNextGen(vector<vector<int>> &mat, vector<vector<int>> &nextGen) {
     int m = mat.size();
     int n = mat[0].size();
 
-    // Directions of eight possible neighbors
+    //directions of eight possible neighbors
     vector<vector<int>> directions =
     {{0, 1}, {1, 0}, {0, -1},
      {-1, 0}, {1, 1}, {-1, -1},
@@ -16,27 +15,24 @@ void findNextGen(vector<vector<int>> &mat, vector<vector<int>> &nextGen) {
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
 
-            // Count the number of live neighbors
-            int live = 0;
+            int live = 0; //init live neighbours to 0
             for (auto dir : directions) {
                 int x = i + dir[0];
                 int y = j + dir[1];
 
-                // Check if the neighbor is live
+                //check if the neighbor is live
                 if (x >= 0 && x < m && y >= 0 && y < n && (mat[x][y] == 1)) {
                     live++;
                 }
             }
 
-            // If current cell is live and number of live neighbors
-            // is less than 2 or greater than 3, then the cell will die
+            // cell death logic (less than 2 or greater than 3)
             if (mat[i][j] == 1 && (live < 2 || live > 3)) {
                 nextGen[i][j] = 0;
             }
 
 
-            // If current cell is dead and number of live neighbors
-            // is equal to 3, then the cell will become live
+            // cell live logic (cell dead, live neighbours = 3)
             else if (mat[i][j] == 0 && live == 3) {
                 nextGen[i][j] = 1;
             }
@@ -83,8 +79,8 @@ int main() {
         cout << "Invalid input. Enter a value greater than 3." << endl;
         cin >> m >> n;
     }
-    vector<vector<int>> mat(m, vector<int>(n, 0));
-    vector<vector<int>> nextGen(m, vector<int>(n, 0));  // Next
+    vector<vector<int>> mat(m, vector<int>(n, 0)); //Current
+    vector<vector<int>> nextGen(m, vector<int>(n, 0));  //Next
 
     initRandomGrid(mat, m, n);
 
