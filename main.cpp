@@ -1,6 +1,28 @@
 #include "utils/bits/stdc++.hpp"
 #include <iostream>
+//#include <SFML/Graphics.hpp>
+
 using namespace std;
+
+const int WIDTH = 800;
+const int HEIGHT = 800;
+const int GRID_SIZE = 50;
+vector<vector<int>> grid(GRID_SIZE, vector<int>(GRID_SIZE, 0)); // Use vector
+
+// void drawGrid(sf::RenderWindow &window) {
+//     sf::RectangleShape cell(sf::Vector2f(WIDTH / GRID_SIZE, HEIGHT / GRID_SIZE));
+//     for (int i = 0; i < GRID_SIZE; i++) {
+//         for (int j = 0; j < GRID_SIZE; j++) {
+//             if (grid[i][j] == 1) {
+//                 cell.setFillColor(sf::Color::Green); // Alive = green
+//             } else {
+//                 cell.setFillColor(sf::Color::White); // Dead =  white
+//             }
+//             cell.setPosition(i * (WIDTH / GRID_SIZE), j * (HEIGHT / GRID_SIZE));
+//             window.draw(cell);
+//         }
+//     }
+// }
 
 void findNextGen(vector<vector<int>> &mat, vector<vector<int>> &nextGen) {
     int m = mat.size();
@@ -43,7 +65,7 @@ void findNextGen(vector<vector<int>> &mat, vector<vector<int>> &nextGen) {
             }
         }
     }
-    mat = nextGen;
+    mat.swap(nextGen);
 }
 
 void initRandomGrid(vector <vector<int>> &mat, int m , int n) {
@@ -65,6 +87,8 @@ void printGrid(const vector<vector<int>> &mat) {
 }
 
 int main() {
+    //sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Game of Life");
+    
     // HARD CODED Rows and Columns //
     //int m = 10; //rows
     //int n = 10; //columns
@@ -99,7 +123,15 @@ int main() {
         cout << "Generation " << gen + 1 << ":\n";
         printGrid(mat);
         findNextGen(mat, nextGen);
+
+        if (gen == 4 || gen == 9 || gen == 14 || gen == 19) {
+            char continueGame;
+            cout << "Press 'q' to quit or any key to continue: ";
+            cin >> continueGame;
+            if (continueGame == 'q' || continueGame == 'Q') {
+                break;
+            }
+        }
         this_thread::sleep_for(chrono::milliseconds(500));
     }
-
 }

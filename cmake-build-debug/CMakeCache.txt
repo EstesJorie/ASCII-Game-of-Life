@@ -222,6 +222,9 @@ GameOfLifeA_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 GameOfLifeA_SOURCE_DIR:STATIC=/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife
 
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=/usr/local/lib/cmake/SFML
+
 
 ########################
 # INTERNAL cache entries
