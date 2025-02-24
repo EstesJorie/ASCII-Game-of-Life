@@ -1,0 +1,3 @@
+D:/C++ TUTORIALS/GameOfLifeA/_vsbuild/CMakeFiles/GameOfLifeA.dir
+D:/C++ TUTORIALS/GameOfLifeA/_vsbuild/CMakeFiles/ALL_BUILD.dir
+D:/C++ TUTORIALS/GameOfLifeA/_vsbuild/CMakeFiles/ZERO_CHECK.dir

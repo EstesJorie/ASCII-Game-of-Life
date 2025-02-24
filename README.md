@@ -9,7 +9,7 @@ A simple ASCII re-creation of John Conway's Game of Life, written in C++20. The 
 
 To build a Visual Studio Solution (.sln), in the source directory open the terminal and run the command: 
 
-cmake -B build -G 'Visual Studio 17 2022'
+cmake -B build -G "Visual Studio 17 2022"
 
 This builds a Visual Studio project to the 'builds' folder containde within the repo. 
 
