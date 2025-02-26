@@ -1,0 +1,7 @@
+Target dependency graph (3 targets)
+Target 'ALL_BUILD' in project 'GameOfLifeA'
+➜ Explicit dependency on target 'GameOfLifeA' in project 'GameOfLifeA'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'GameOfLifeA'
+Target 'GameOfLifeA' in project 'GameOfLifeA'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'GameOfLifeA'
+Target 'ZERO_CHECK' in project 'GameOfLifeA' (no dependencies)
