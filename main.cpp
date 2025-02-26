@@ -1,6 +1,7 @@
 #include "utils/bits/stdc++.hpp"
 #include <iostream>
-#include <SFML/Graphics.hpp>
+//#include <SFML/Graphics.hpp>
+
 
 using namespace std;
 
@@ -124,7 +125,7 @@ int main() {
         printGrid(mat);
         findNextGen(mat, nextGen);
 
-        if (gen == 4 || gen == 9 || gen == 14 || gen == 19) {
+        if (gen == 4 || gen == 9 || gen == 14 || gen == 19 || gen == 24) {
             char continueGame;
             cout << "Press 'q' to quit or any key to continue: ";
             cin >> continueGame;
