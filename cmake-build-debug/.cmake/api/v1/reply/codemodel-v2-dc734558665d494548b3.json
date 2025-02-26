@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "GameOfLifeA",
+					"name" : "GameOfLife",
 					"targetIndexes" : 
 					[
 						0
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GameOfLifeA::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GameOfLifeA-Debug-69c8582fbce6178d52f2.json",
+					"jsonFile" : "target-GameOfLifeA-Debug-94ff21828ae6331a7204.json",
 					"name" : "GameOfLifeA",
 					"projectIndex" : 0
 				}

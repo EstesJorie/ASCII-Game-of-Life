@@ -2,24 +2,25 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-
 using namespace std;
 
 const int WIDTH = 800;
 const int HEIGHT = 800;
 const int GRID_SIZE = 50;
-vector<vector<int>> grid(GRID_SIZE, vector<int>(GRID_SIZE, 0)); // Use vector
+
+vector<std::vector<int>> grid(GRID_SIZE, std::vector<int>(GRID_SIZE, 0));
 
  void drawGrid(sf::RenderWindow &window) {
-     sf::RectangleShape cell(sf::Vector2f(WIDTH / GRID_SIZE, HEIGHT / GRID_SIZE));
+sf::RectangleShape cell(sf::Vector2f(WIDTH / GRID_SIZE, HEIGHT / GRID_SIZE));
      for (int i = 0; i < GRID_SIZE; i++) {
          for (int j = 0; j < GRID_SIZE; j++) {
              if (grid[i][j] == 1) {
-                 cell.setFillColor(sf::Color::Green); // Alive = green
+                 cell.setFillColor(sf::Color::Red); // Alive = Red
              } else {
-                 cell.setFillColor(sf::Color::White); // Dead =  white
+                 cell.setFillColor(sf::Color::Black); // Dead =  Black
              }
-             cell.setPosition(i * (WIDTH / GRID_SIZE), j * (HEIGHT / GRID_SIZE));
+             cout << "Cell Position: (" << i << ',' << j << ")\n";
+             cell.setPosition(sf::Vector2f(i * (WIDTH / GRID_SIZE), j * (HEIGHT / GRID_SIZE)));
              window.draw(cell);
          }
      }
@@ -76,6 +77,8 @@ void initRandomGrid(vector <vector<int>> &mat, int m , int n) {
             mat[i][j] = rand() % 2; //rand value between 0 and 1
         }
     }
+
+     mat[10][10] = 1;
 }
 
 void printGrid(const vector<vector<int>> &mat) {
@@ -119,20 +122,41 @@ int main() {
         cin >> gens;
     }
 
-    for (int gen = 0; gen < gens; gen++) {
-        cout << "\033[2J\033[H";
-        cout << "Generation " << gen + 1 << ":\n";
-        printGrid(mat);
-        findNextGen(mat, nextGen);
+     sf::RenderWindow window(sf::VideoMode(sf::Vector2u(WIDTH, HEIGHT)), "Game of Life");
 
-        if (gen == 4 || gen == 9 || gen == 14 || gen == 19 || gen == 24) {
-            char continueGame;
-            cout << "Press 'q' to quit or any key to continue: ";
-            cin >> continueGame;
-            if (continueGame == 'q' || continueGame == 'Q') {
-                break;
-            }
-        }
-        this_thread::sleep_for(chrono::milliseconds(500));
-    }
+     for (int gen = 0; gen < gens; gen++) {
+         if (window.isOpen()) {
+             while (const std::optional<sf::Event> event = window.pollEvent()) {
+                 if (event->is<sf::Event::Closed>()) {
+                     window.close();
+                 } else if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>()) {
+                     if (keyPressed->scancode == sf::Keyboard::Scancode::Escape)
+                         window.close();
+                 }
+             }
+
+             window.clear(sf::Color::White);  // clear window
+             findNextGen(mat, nextGen);  // find next
+             drawGrid(window);  // draw
+
+             window.display();
+
+             if (gen == 4 || gen == 9 || gen == 14 || gen == 19 || gen == 24) {
+                 char continueGame;
+                 std::cout << "Press 'q' to quit or any key to continue: ";
+                 std::cin >> continueGame;
+                 if (continueGame == 'q' || continueGame == 'Q') {
+                     break;
+                 }
+             }
+
+             std::this_thread::sleep_for(std::chrono::seconds(2));
+
+             sf::RectangleShape testRect(sf::Vector2f(100, 100));
+             testRect.setFillColor(sf::Color::Red);
+             window.draw(testRect);
+         }
+     }
+
+
 }

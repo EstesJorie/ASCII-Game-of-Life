@@ -146,7 +146,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=GameOfLifeA
+CMAKE_PROJECT_NAME:STATIC=GameOfLife
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -222,8 +222,20 @@ GameOfLifeA_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 GameOfLifeA_SOURCE_DIR:STATIC=/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife
 
+//Value Computed by CMake
+GameOfLife_BINARY_DIR:STATIC=/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife/cmake-build-debug
+
+//Value Computed by CMake
+GameOfLife_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+GameOfLife_SOURCE_DIR:STATIC=/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife
+
 //The directory containing a CMake configuration file for SFML.
 SFML_DIR:PATH=/usr/local/lib/cmake/SFML
+
+//Path to a file.
+SFML_DOC_DIR:PATH=/usr/local/share/doc/SFML
 
 
 ########################
