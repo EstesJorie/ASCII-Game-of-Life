@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GameOfLifeA::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GameOfLifeA-Debug-69c8582fbce6178d52f2.json",
+					"jsonFile" : "target-GameOfLifeA-Debug-798d8d59cac91885e970.json",
 					"name" : "GameOfLifeA",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife/cmake-build-debug",
-		"source" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife"
+		"build" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife/cmake-build-debug",
+		"source" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife"
 	},
 	"version" : 
 	{

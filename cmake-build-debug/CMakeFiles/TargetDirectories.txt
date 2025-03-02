@@ -1,3 +1,3 @@
-/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife/cmake-build-debug/CMakeFiles/GameOfLifeA.dir
-/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife/cmake-build-debug/CMakeFiles/GameOfLifeA.dir
+/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife/cmake-build-debug"
+			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife"
+			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1127,7 +1127,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife/cmake-build-debug"
+			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife/cmake-build-debug"
 		},
 		{
 			"name" : "GameOfLifeA_IS_TOP_LEVEL",
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/GameOfLife"
+			"value" : "/Users/user/Dropbox/MSc DATA SCIENCE/SCC.462 - Distributed Artifical Intelligence/FINAL PROJECT (1ST MAY)/C++ Original GameOfLife"
 		}
 	],
 	"kind" : "cache",

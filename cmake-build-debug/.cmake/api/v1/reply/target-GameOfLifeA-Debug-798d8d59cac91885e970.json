@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "build/GameOfLifeA"
+			"path" : "GameOfLifeA"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 9,
+				"line" : 6,
 				"parent" : 0
 			}
 		]
